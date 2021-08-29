@@ -1,0 +1,44 @@
+﻿
+@model IEnumerable<Project>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Projects</h1>
+    <table class="table" id="projectsTable">
+        <thead>
+            <tr>
+                <th scope="col">RB</th>
+                <th scope="col">Project</th>
+                <th scope="col">Code</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr id="projectData">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="width:150px">
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-primary text-white" asp-action="Edit" asp-route-Id="@Model">
+                            EDIT
+                        </a>
+
+                        <a class="btn btn-success text-white" asp-action="Details" asp-route-Id="@Model">
+                            DETAILS
+                        </a>
+
+                        <a class="btn btn-danger text-white" asp-action="Delete" asp-route-Id="@Model">
+                            DELETE
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <a asp-action="Create" class="btn btn-info"><i class="fas fa-plus"></i> &nbsp;  Create New </a>
+    </p>
+</div>

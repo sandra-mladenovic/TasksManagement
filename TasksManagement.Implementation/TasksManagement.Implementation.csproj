@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TasksManagement.Application\TasksManagement.Application.csproj" />
+    <ProjectReference Include="..\TasksManagement.DataAccess\TasksManagement.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
